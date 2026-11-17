@@ -126,9 +126,7 @@ Keep it concise and realistic. Return only the data, no explanations.`;
         });
 
     } catch (error) {
-        return Response.json({ 
-            error: error.message,
-            stack: error.stack 
-        }, { status: 500 });
+        console.error('intelligentRouter failed:', error);
+        return Response.json({ error: 'Routing request failed' }, { status: 500 });
     }
 });
