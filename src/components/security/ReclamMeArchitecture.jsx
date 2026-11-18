@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Zap, Globe, Lock, ArrowRight, CheckCircle, Activity } from "lucide-react";
 import { motion } from "framer-motion";
 
-export default function ThreePillarArchitecture() {
+export default function ReclaimMeArchitecture() {
     const [activeFlow, setActiveFlow] = useState(0);
     const [scrambleCount, setScrambleCount] = useState(0);
 
@@ -25,7 +25,7 @@ export default function ThreePillarArchitecture() {
 
     const pillars = [
         {
-            id: 'bioverify',
+            id: 'dnaverify',
             name: 'HelixVerify',
             subtitle: 'DNA Wearable Identity Anchor',
             icon: Shield,
@@ -36,7 +36,7 @@ export default function ThreePillarArchitecture() {
             details: ['DNA verification', 'Wearable hardware token', 'Hardware-backed rotation', 'Liveness detection']
         },
         {
-            id: 'forgedapi',
+            id: 'Dataaccess',
             name: 'CipherPass',
             subtitle: 'Protected API Gateway',
             icon: Globe,
@@ -60,9 +60,9 @@ export default function ThreePillarArchitecture() {
     ];
 
     const flowSteps = [
-        { step: 1, text: 'DNA token inserted', pillar: 'bioverify' },
-        { step: 2, text: 'Identity verified', pillar: 'bioverify' },
-        { step: 3, text: 'Request routed to API', pillar: 'forgedapi' },
+        { step: 1, text: 'DNA token inserted', pillar: 'helixverify' },
+        { step: 2, text: 'dna verified', pillar: 'helixverify' },
+        { step: 3, text: 'Request routed to API', pillar: 'CipherPass' },
         { step: 4, text: 'Shield scrambling active', pillar: 'ipshield' }
     ];
 
