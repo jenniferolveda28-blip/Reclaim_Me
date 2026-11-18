@@ -1,3 +1,4 @@
+```markdown
 # Reclaim Me
 
 A security and identity-protection platform covering threat detection, auditor access, identity verification and personal-data exposure removal. The repo carries 128+ page-level screens and 36 entities, so it is the largest of the Base44 apps here.
@@ -18,6 +19,7 @@ cd reclaim-me
 npm install
 npm install -g base44@latest
 base44 dev
+```
 
 ## Feature areas (from `src/pages`)
 
@@ -43,15 +45,5 @@ base44 dev
 
 - `src/components` holds only 11 shared components; most UI is page-local, which is why page count is high. Expect each page to carry its own logic.
 - `DemoBanner` and `PrintReportButton` signal a demo mode and print/PDF report output. Keep both in mind when changing shared layout.
+```
 
-## Related repositories
-
-| Repository | What it is |
-| --- | --- |
-| `blackthorn-manor` | Haunted-house adventure game |
-| `reclaim-me` | This app: security and identity protection |
-| `lumigery-creators-hq` | Creator and podcast operations workspace |
-| `cognipath` | Mental-wellness and learning companion |
-| `game-day-jukebox` | Music tournament and voting app |
-| `claude-live` | Avatar-based live chat sessions |
-| `vite-react` | Bare Vite starter, no app code |
