@@ -18,3 +18,40 @@ cd reclaim-me
 npm install
 npm install -g base44@latest
 base44 dev
+
+## Feature areas (from `src/pages`)
+
+| Area | Representative pages |
+| --- | --- |
+| Threat intelligence | `AIThreatDetection`, `AIThreatAnalysis`, `ThreatCorrelation`, `CriminalActivityAlerts`, `AlertFeed` |
+| Anomaly analysis | `AnomalyInsights`, `AnomalyInvestigation`, `AnomalyOrchestration`, `BehaviorAnomalies` |
+| Auditor workflow | `AuditorPortal`, `AuditorManagement`, `AuditorAccess`, `AuditorAccessLogs`, `AuditorCertificatePortal`, `AuditComplianceDashboard`, `AuditFeedbackTracker` |
+| Identity verification | `HelixVerify*` screens, `Authenticator`, `HardwareToken` |
+| Exposure removal | `DataBroker` screens, `Exposure*`, `Scrubbing` sessions |
+| Platform health | `APIGatewayHealth`, `Analytics`, `SecurityLog`, `SecurityConfig` |
+
+## Data model (`base44/entities`)
+
+36 entities, grouped roughly as:
+
+- Identity and access: `User`, `Role`, `UserRoleAssignment`, `AuditorAccessPass`, `AuditorAccessLog`, `HelixVerifyToken`, `HelixVerifyRegistration`, `HelixVerifyLinkedAccount`, `LinkedAccount`, `HardwareToken`, `IdentityCertificate`
+- Threat and anomaly: `BehaviorAnomaly`, `CriminalActivityAlert`, `ThreatCorrelation`, `IncidentRule`, `SecurityLog`, `ProtectedRequest`, `AnalyticsMetric`
+- Exposure and privacy: `DataBroker`, `ExposureRecord`, `ScramblingSession`, `UniversalKey`, `CipherPass`
+- Operations: `Subscription`, `SecurityConfig`, `SecurityReport`, `AuditFeedback`, `InvestorMeeting`, `InvestorInteraction`, `ProtectedEndpointGroup`
+
+## Notes
+
+- `src/components` holds only 11 shared components; most UI is page-local, which is why page count is high. Expect each page to carry its own logic.
+- `DemoBanner` and `PrintReportButton` signal a demo mode and print/PDF report output. Keep both in mind when changing shared layout.
+
+## Related repositories
+
+| Repository | What it is |
+| --- | --- |
+| `blackthorn-manor` | Haunted-house adventure game |
+| `reclaim-me` | This app: security and identity protection |
+| `lumigery-creators-hq` | Creator and podcast operations workspace |
+| `cognipath` | Mental-wellness and learning companion |
+| `game-day-jukebox` | Music tournament and voting app |
+| `claude-live` | Avatar-based live chat sessions |
+| `vite-react` | Bare Vite starter, no app code |
