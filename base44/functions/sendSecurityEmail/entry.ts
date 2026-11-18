@@ -1,6 +1,7 @@
 import { createClientFromRequest } from 'npm:@base44/sdk@0.8.54';
 
-const ADMIN_KINDS = ['security_digest', 'auditor_passcode', 'destruction_reminder'];
+const ADMIN_KINDS = ['threat_neutralized', 'security_digest', 'auditor_passcode', 'destruction_reminder'];
+const SEVERITIES = ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL', 'EMERGENCY', 'UNKNOWN'];
 
 export default async function(req) {
   try {
@@ -10,7 +11,7 @@ export default async function(req) {
 
     const body = await req.json().catch(() => ({}));
     const { kind } = body;
-    if (!['threat_neutralized', ...ADMIN_KINDS].includes(kind)) {
+    if (!ADMIN_KINDS.includes(kind)) {
       return Response.json({ error: 'Unknown email kind' }, { status: 400 });
     }
     if (ADMIN_KINDS.includes(kind) && user.role !== 'admin') {
@@ -27,8 +28,10 @@ export default async function(req) {
     }
 
     if (kind === 'threat_neutralized') {
-      const title = String(body.title || 'Threat').slice(0, 200);
-      const severity = String(body.severity || 'unknown').slice(0, 30).toUpperCase();
+      // Plain label only: letters, digits, spaces and basic punctuation — no links or line breaks
+      const title = String(body.title || 'Threat').replace(/[^A-Za-z0-9 _\-().,]/g, '').replace(/\s+/g, ' ').trim().slice(0, 80) || 'Threat';
+      const sevRaw = String(body.severity || 'unknown').toUpperCase();
+      const severity = SEVERITIES.includes(sevRaw) ? sevRaw : 'UNKNOWN';
       email = {
         to: 'security-team@threepillar.ai',
         subject: `🚨 THREAT NEUTRALIZED: ${title}`,

@@ -1,4 +1,7 @@
-import { createClientFromRequest } from 'npm:@base44/sdk@0.8.31';
+import { createClientFromRequest } from 'npm:@base44/sdk@0.8.54';
+
+const MAX_FAILURES = 5;
+const LOCKOUT_WINDOW_MIN = 15;
 
 Deno.serve(async (req) => {
   try {
@@ -26,9 +29,24 @@ Deno.serve(async (req) => {
       );
     }
 
+    // Brute-force protection: lock this caller out after repeated failures
+    const failTag = `AUDITOR_PASSCODE_FAIL user=${user.id}`;
+    const windowStart = new Date(Date.now() - LOCKOUT_WINDOW_MIN * 60 * 1000).toISOString();
+    const recentFailures = await base44.asServiceRole.entities.SecurityLog.count({
+      event_type: 'access_denied',
+      details: { $regex: `^${failTag} ` },
+      created_date: { $gte: windowStart }
+    });
+    if (recentFailures >= MAX_FAILURES) {
+      return Response.json(
+        { error: `Too many failed attempts. Try again in ${LOCKOUT_WINDOW_MIN} minutes.` },
+        { status: 429 }
+      );
+    }
+
     // Find a matching pass — name must match case-insensitively
     const passes = await base44.asServiceRole.entities.AuditorAccessPass.filter({
-      passcode: passcode.trim()
+      passcode: String(passcode).trim()
     });
 
     const match = passes.find(
@@ -38,6 +56,12 @@ Deno.serve(async (req) => {
     );
 
     if (!match) {
+      await base44.asServiceRole.entities.SecurityLog.create({
+        event_type: 'access_denied',
+        details: `${failTag} — failed auditor passcode attempt by ${user.email} (${recentFailures + 1}/${MAX_FAILURES}).`,
+        success: false,
+        threat_level: recentFailures + 1 >= MAX_FAILURES ? 'high' : 'medium'
+      });
       return Response.json(
         { error: 'Invalid name or passcode. Please check your credentials and try again.' },
         { status: 403 }
