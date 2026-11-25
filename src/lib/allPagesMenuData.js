@@ -135,6 +135,7 @@ export const ALL_PAGE_GROUPS = [
       { label: 'Live Demonstration', to: '/LiveDemonstration' },
       { label: 'Executive Summary', to: '/ExecutiveSummary' },
       { label: 'Marketing Materials', to: '/MarketingMaterials' },
+      { label: 'Outreach Campaign', to: '/outreach-campaign' },
       { label: 'Lead Activity Summary', to: '/LeadActivitySummary' },
       { label: 'Bulk Lead Actions', to: '/LeadBulkActions' },
       { label: 'Texas NDA', to: '/TexasNDA' },

@@ -85,6 +85,7 @@ const OWNER_CATEGORIES = {
     label: 'Investor & CRM',
     items: [
       { label: 'Seeking Partners', to: '/SeekingPartners', icon: Star },
+      { label: 'Outreach Campaign', to: '/outreach-campaign', icon: Mail },
       { label: 'Investor Overview', to: '/InvestorOverview', icon: BarChart3 },
       { label: 'Investor CRM', to: '/InvestorCRM', icon: Users },
       { label: 'Prototype Schematics', to: '/helix-prototype-schematics', icon: Watch },
