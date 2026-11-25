@@ -117,6 +117,10 @@ import SharedHelixTokenProductionBrief from './pages/shared_HelixTokenProduction
 import SharedHelixPrototypeSchematics from './pages/shared_HelixPrototypeSchematics';
 import SharedHelixTokenArchitecturePaperwork from './pages/shared_HelixTokenArchitecturePaperwork';
 import SharedOutreachCampaign from './pages/shared_OutreachCampaign';
+import BuildWithUs from './pages/BuildWithUs';
+import HelixVerifyArchitecture from './pages/HelixVerifyArchitecture';
+import MarketingCampaigns from './pages/MarketingCampaigns';
+import SystemSettings from './pages/SystemSettings';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -157,6 +161,7 @@ const AuthenticatedApp = () => {
         <Route path="/auditor-access" element={<AuditorAccess />} />
       </Route>
       <Route path="/connect" element={<Connect />} />
+      <Route path="/build-with-us" element={<LayoutWrapper currentPageName="build-with-us"><BuildWithUs /></LayoutWrapper>} />
       <Route path="/oauth/consent" element={<OAuthConsent />} />
 
       {/* All app routes gated by ProtectedRoute */}
@@ -275,6 +280,9 @@ const AuthenticatedApp = () => {
         <Route path="/helix-prototype-schematics" element={<LayoutWrapper currentPageName="helix-prototype-schematics"><SharedHelixPrototypeSchematics /></LayoutWrapper>} />
         <Route path="/helix-token-architecture-paperwork" element={<LayoutWrapper currentPageName="helix-token-architecture-paperwork"><SharedHelixTokenArchitecturePaperwork /></LayoutWrapper>} />
         <Route path="/outreach-campaign" element={<LayoutWrapper currentPageName="outreach-campaign"><SharedOutreachCampaign /></LayoutWrapper>} />
+        <Route path="/helix-verify-architecture" element={<LayoutWrapper currentPageName="helix-verify-architecture"><HelixVerifyArchitecture /></LayoutWrapper>} />
+        <Route path="/marketing-campaigns" element={<LayoutWrapper currentPageName="marketing-campaigns"><MarketingCampaigns /></LayoutWrapper>} />
+        <Route path="/system-settings" element={<LayoutWrapper currentPageName="system-settings"><SystemSettings /></LayoutWrapper>} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />

@@ -1,0 +1,93 @@
+{
+  "name": "PartnerApplication",
+  "type": "object",
+  "properties": {
+    "full_name": {
+      "type": "string",
+      "description": "Name of the person applying"
+    },
+    "email": {
+      "type": "string",
+      "description": "Contact email"
+    },
+    "track": {
+      "type": "string",
+      "enum": [
+        "engineer",
+        "lab",
+        "investor",
+        "advisor",
+        "other"
+      ],
+      "default": "engineer",
+      "description": "Which partnership track the applicant is interested in",
+      "enumColors": [
+        "green",
+        "purple",
+        "blue",
+        "yellow",
+        "gray"
+      ]
+    },
+    "organization": {
+      "type": "string",
+      "description": "University, lab or firm"
+    },
+    "focus_area": {
+      "type": "string",
+      "description": "Discipline or area of interest"
+    },
+    "message": {
+      "type": "string",
+      "maxLength": 2000,
+      "description": "What they want to work on or discuss"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "in_review",
+        "contacted",
+        "closed"
+      ],
+      "default": "new",
+      "description": "Follow-up state",
+      "enumColors": [
+        "blue",
+        "yellow",
+        "green",
+        "gray"
+      ]
+    }
+  },
+  "required": [
+    "full_name",
+    "email",
+    "track"
+  ],
+  "rls": {
+    "create": {},
+    "read": {
+      "$or": [
+        {
+          "created_by_id": "{{user.id}}"
+        },
+        {
+          "user_condition": {
+            "role": "admin"
+          }
+        }
+      ]
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

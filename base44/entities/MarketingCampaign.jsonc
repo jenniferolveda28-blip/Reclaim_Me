@@ -1,0 +1,111 @@
+{
+  "name": "MarketingCampaign",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Campaign name"
+    },
+    "audience": {
+      "type": "string",
+      "enum": [
+        "personal_authentication",
+        "biotech_partners",
+        "investors"
+      ],
+      "default": "personal_authentication",
+      "description": "Who the campaign targets",
+      "enumColors": [
+        "purple",
+        "green",
+        "blue"
+      ]
+    },
+    "channel": {
+      "type": "string",
+      "description": "Primary channel (e.g. privacy communities, BioSpace, direct email)"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "active",
+        "paused",
+        "completed"
+      ],
+      "default": "draft",
+      "description": "Current campaign state",
+      "enumColors": [
+        "gray",
+        "green",
+        "yellow",
+        "blue"
+      ]
+    },
+    "start_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Campaign start date"
+    },
+    "end_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Planned end date"
+    },
+    "budget": {
+      "type": "number",
+      "default": 0,
+      "description": "Planned budget in USD"
+    },
+    "spend": {
+      "type": "number",
+      "default": 0,
+      "description": "Spend to date in USD"
+    },
+    "leads_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Contacts, applications or signups generated"
+    },
+    "conversions_count": {
+      "type": "number",
+      "default": 0,
+      "description": "Calls booked, demos completed or qualified partners"
+    },
+    "goal": {
+      "type": "string",
+      "description": "The one outcome this campaign is measured on"
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 2000,
+      "description": "Working notes and next actions"
+    }
+  },
+  "required": [
+    "name",
+    "audience"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}

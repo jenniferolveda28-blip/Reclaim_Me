@@ -1,0 +1,99 @@
+{
+  "name": "PlatformSettings",
+  "type": "object",
+  "properties": {
+    "setting_key": {
+      "type": "string",
+      "default": "global",
+      "description": "Single settings record key"
+    },
+    "app_name": {
+      "type": "string",
+      "default": "Reclaim Me",
+      "description": "Product name shown across the platform"
+    },
+    "tagline": {
+      "type": "string",
+      "description": "One-line product tagline"
+    },
+    "primary_color": {
+      "type": "string",
+      "default": "#06b6d4",
+      "description": "Primary brand colour (hex)"
+    },
+    "support_email": {
+      "type": "string",
+      "description": "Address shown for support and auditor contact"
+    },
+    "notify_threats": {
+      "type": "boolean",
+      "default": true,
+      "description": "Send an alert when a threat is detected"
+    },
+    "notify_exposure": {
+      "type": "boolean",
+      "default": true,
+      "description": "Send an alert when a new broker exposure is found"
+    },
+    "notify_weekly_digest": {
+      "type": "boolean",
+      "default": true,
+      "description": "Send the weekly security digest"
+    },
+    "digest_frequency": {
+      "type": "string",
+      "enum": [
+        "daily",
+        "weekly",
+        "off"
+      ],
+      "default": "weekly",
+      "description": "How often the digest is sent",
+      "enumColors": [
+        "blue",
+        "green",
+        "gray"
+      ]
+    },
+    "require_mfa": {
+      "type": "boolean",
+      "default": true,
+      "description": "Require a second factor for administrator sign-in"
+    },
+    "auto_scrub": {
+      "type": "boolean",
+      "default": true,
+      "description": "Open removal requests automatically for critical findings"
+    },
+    "session_timeout_minutes": {
+      "type": "number",
+      "default": 30,
+      "description": "Idle minutes before a session expires"
+    }
+  },
+  "required": [
+    "setting_key"
+  ],
+  "rls": {
+    "create": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "read": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "update": {
+      "user_condition": {
+        "role": "admin"
+      }
+    },
+    "delete": {
+      "user_condition": {
+        "role": "admin"
+      }
+    }
+  }
+}
