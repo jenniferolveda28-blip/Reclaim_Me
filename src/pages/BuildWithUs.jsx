@@ -29,36 +29,7 @@ const TRACKS = [
   },
 ];
 
-const PROGRAMS = [
-  {
-    icon: FlaskConical,
-    title: 'Co-development fellowship',
-    body: 'Twelve months, one problem: a wearable that reads a small marker panel and issues a rotating code. Fellowship carries equity and a materials budget.',
-  },
-  {
-    icon: GraduationCap,
-    title: 'Sponsored university research',
-    body: 'Funded research agreement with a lab working on biosensors, microfluidics or liveness, with an option to license the resulting work.',
-  },
-  {
-    icon: Handshake,
-    title: 'Lab and assay partner',
-    body: 'A CLIA-certified partner for sample processing, hash generation and the destruction schedule that follows consent withdrawal.',
-  },
-  {
-    icon: ShieldCheck,
-    title: 'Regulatory and clinical advisor',
-    body: 'GINA, BIPA and GDPR counsel, plus clinical input on what a genetic identity claim is allowed to say.',
-  },
-];
-
-const OPEN_NEEDS = [
-  'Biosensor and microfluidics engineer',
-  'Secure-element firmware engineer',
-  'Bioinformatics engineer for the marker panel',
-  'Assay lab partner (CLIA-certified)',
-  'Regulatory counsel for genetic privacy',
-];
+import { PROGRAMS, OPEN_NEEDS } from '@/lib/biotechPartnershipData';
 
 export default function BuildWithUs() {
   return (
@@ -137,7 +108,7 @@ export default function BuildWithUs() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {PROGRAMS.map((program) => (
             <div key={program.title} className="rounded-xl border border-slate-700 bg-slate-800/40 p-4">
-              <program.icon className="w-4 h-4 text-cyan-400 mb-2" />
+              <FlaskConical className="w-4 h-4 text-cyan-400 mb-2" />
               <h3 className="text-sm font-semibold text-slate-100 mb-1">{program.title}</h3>
               <p className="text-xs text-slate-400 leading-relaxed">{program.body}</p>
             </div>

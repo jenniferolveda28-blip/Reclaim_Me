@@ -121,6 +121,16 @@ import BuildWithUs from './pages/BuildWithUs';
 import HelixVerifyArchitecture from './pages/HelixVerifyArchitecture';
 import MarketingCampaigns from './pages/MarketingCampaigns';
 import SystemSettings from './pages/SystemSettings';
+import AuditorComplianceHub from './pages/AuditorComplianceHub';
+import InvestorRelations from './pages/InvestorRelations';
+import BiotechPartnerships from './pages/BiotechPartnerships';
+import IncidentResponseLog from './pages/IncidentResponseLog';
+import ComplianceArchive from './pages/ComplianceArchive';
+import KeyRotationManager from './pages/KeyRotationManager';
+import WebhookConfig from './pages/WebhookConfig';
+import AnomalyRegistry from './pages/AnomalyRegistry';
+import TokenLifecycle from './pages/TokenLifecycle';
+import AuditorTaskQueue from './pages/AuditorTaskQueue';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -283,6 +293,16 @@ const AuthenticatedApp = () => {
         <Route path="/helix-verify-architecture" element={<LayoutWrapper currentPageName="helix-verify-architecture"><HelixVerifyArchitecture /></LayoutWrapper>} />
         <Route path="/marketing-campaigns" element={<LayoutWrapper currentPageName="marketing-campaigns"><MarketingCampaigns /></LayoutWrapper>} />
         <Route path="/system-settings" element={<LayoutWrapper currentPageName="system-settings"><SystemSettings /></LayoutWrapper>} />
+        <Route path="/auditor-compliance-hub" element={<LayoutWrapper currentPageName="auditor-compliance-hub"><AuditorComplianceHub /></LayoutWrapper>} />
+        <Route path="/investor-relations" element={<LayoutWrapper currentPageName="investor-relations"><InvestorRelations /></LayoutWrapper>} />
+        <Route path="/biotech-partnerships" element={<LayoutWrapper currentPageName="biotech-partnerships"><BiotechPartnerships /></LayoutWrapper>} />
+        <Route path="/incident-response-log" element={<LayoutWrapper currentPageName="incident-response-log"><IncidentResponseLog /></LayoutWrapper>} />
+        <Route path="/compliance-archive" element={<LayoutWrapper currentPageName="compliance-archive"><ComplianceArchive /></LayoutWrapper>} />
+        <Route path="/key-rotation-manager" element={<LayoutWrapper currentPageName="key-rotation-manager"><KeyRotationManager /></LayoutWrapper>} />
+        <Route path="/webhook-config" element={<LayoutWrapper currentPageName="webhook-config"><WebhookConfig /></LayoutWrapper>} />
+        <Route path="/anomaly-registry" element={<LayoutWrapper currentPageName="anomaly-registry"><AnomalyRegistry /></LayoutWrapper>} />
+        <Route path="/token-lifecycle" element={<LayoutWrapper currentPageName="token-lifecycle"><TokenLifecycle /></LayoutWrapper>} />
+        <Route path="/auditor-task-queue" element={<LayoutWrapper currentPageName="auditor-task-queue"><AuditorTaskQueue /></LayoutWrapper>} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />
