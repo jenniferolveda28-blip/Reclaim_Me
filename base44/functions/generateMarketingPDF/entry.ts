@@ -283,7 +283,7 @@ Deno.serve(async (req) => {
             doc.text('Technical Whitepaper', 20, y);
             y += 10;
             doc.setFontSize(12);
-            doc.text('Advanced Authentication Architecture', 20, y);
+            doc.text('Reclaim Me Three-Pillar Architecture', 20, y);
             y += 20;
 
             doc.setFontSize(14);

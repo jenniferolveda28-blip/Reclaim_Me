@@ -68,7 +68,7 @@ export const ALL_PAGE_GROUPS = [
       { label: 'System Compliance Log', to: '/SystemComplianceLog' },
       { label: 'Legal & Compliance', to: '/legal-compliance' },
       { label: 'Destruction Policy', to: '/destruction-policy' },
-      { label: 'Three Pillar Architecture', to: '/ThreePillarView' },
+      { label: 'Reclaim Me Three-Pillar Architecture', to: '/ThreePillarView' },
     ],
   },
   {

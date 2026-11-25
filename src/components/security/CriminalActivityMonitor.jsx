@@ -254,7 +254,7 @@ export default function CriminalActivityMonitor() {
                 <p>• Law enforcement notification for critical threats</p>
                 <p>• All suspicious activity logged for forensic analysis</p>
                 <p>• 24/7 security monitoring active</p>
-                <p>• Emergency hotline: 1-800-FORGED-911</p>
+                <p>• Emergency hotline: 1-800-RECLAIM</p>
               </div>
             </div>
           </div>

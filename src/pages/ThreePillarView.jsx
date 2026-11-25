@@ -18,7 +18,7 @@ export default function ThreePillarView() {
                         </Link>
                     </Button>
                     <PrintReportButton
-                        reportTitle="Reclaim Me Authentication Architecture"
+                        reportTitle="Reclaim Me Three-Pillar Architecture"
                         subtitle="Overview of the three interlocking authentication layers: HelixVerify, CipherPass, and Dynamic Scrambler"
                         filename="reclaim-me-architecture-{date}.pdf"
                         sections={[

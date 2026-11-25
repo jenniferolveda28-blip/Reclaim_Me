@@ -86,7 +86,7 @@ export default function EmergencyProtocol() {
             </div>
             <div className="flex items-center justify-between py-2 border-b">
               <span className="text-gray-600">Security Team</span>
-              <span className="font-mono">security@forged.api</span>
+              <span className="font-mono">security@reclaimme.app</span>
             </div>
             <div className="flex items-center justify-between py-2">
               <span className="text-gray-600">Incident Response</span>

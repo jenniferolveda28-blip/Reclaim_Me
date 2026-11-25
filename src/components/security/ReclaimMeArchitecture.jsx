@@ -72,7 +72,7 @@ export default function ReclaimMeArchitecture() {
                 <CardHeader>
                     <CardTitle className="flex items-center gap-3">
                         <Lock className="w-6 h-6 text-cyan-400" />
-                        <span className="gradient-text">The Key to the City: Reclaim Me Architecture</span>
+                        <span className="gradient-text">The Key to the City: Reclaim Me Three-Pillar Architecture</span>
                     </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-8">
