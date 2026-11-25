@@ -25,11 +25,11 @@ base44 dev
 
 | Area | Representative pages |
 | --- | --- |
-| Threat intelligence | `AIThreatDetection`, `AIThreatAnalysis`, `ThreatCorrelation`, `CriminalActivityAlerts`, `AlertFeed` |
-| Anomaly analysis | `AnomalyInsights`, `AnomalyInvestigation`, `AnomalyOrchestration`, `BehaviorAnomalies` |
+| Threat intelligence | `AIThreatDetection`, `AIThreatAnalysis`, `ThreatAnalysis`, `ThreatCorrelationMap`, `ThreatSummary`, `AlertFeed` |
+| Anomaly analysis | `AnomalyInsights`, `AnomalyInvestigation`, `AnomalyOrchestration` |
 | Auditor workflow | `AuditorPortal`, `AuditorManagement`, `AuditorAccess`, `AuditorAccessLogs`, `AuditorCertificatePortal`, `AuditComplianceDashboard`, `AuditFeedbackTracker` |
-| Identity verification | `HelixVerify*` screens, `Authenticator`, `HardwareToken` |
-| Exposure removal | `DataBroker` screens, `Exposure*`, `Scrubbing` sessions |
+| Identity verification | `HelixVerify*` screens, `Authenticator`, `HardwareHealth`, `HardwareDiagnostics` |
+| Exposure removal | `DataBroker` screens, `Exposure*`, `PendingRemovalDashboard`, `DataRemovalLogs`, `DataRemovalCalendar` |
 | Platform health | `APIGatewayHealth`, `Analytics`, `SecurityLog`, `SecurityConfig` |
 
 ## Data model (`base44/entities`)
