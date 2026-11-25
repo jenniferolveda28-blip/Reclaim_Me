@@ -35,6 +35,7 @@ import ThreatNeutralizationChart from '../components/investor/ThreatNeutralizati
 import SharedPersonalRecoveryStory from '../components/dashboard/shared_PersonalRecoveryStory';
 import UserHelixTokenStatusView from '../components/dashboard/user_HelixTokenStatusView';
 import SharedThreatsDetectedSection from '../components/dashboard/shared_ThreatsDetectedSection';
+import OwnersThreatLatencyTrendChart from '../components/dashboard/owners_ThreatLatencyTrendChart';
 import SharedZonedDashboardNavigation from '../components/dashboard/shared_ZonedDashboardNavigation';
 import OwnersUserManagementSection from '../components/dashboard/owners_UserManagementSection';
 import { FileText, Users } from 'lucide-react';
@@ -206,6 +207,11 @@ export default function Dashboard() {
           requests={requests}
           hardwareTokens={hardwareTokens}
         />
+
+        {/* Threat Levels & System Latency Trend */}
+        <div className="mb-8">
+          <OwnersThreatLatencyTrendChart />
+        </div>
 
         {/* Main Content */}
         <div id="dashboard-main-tabs">
