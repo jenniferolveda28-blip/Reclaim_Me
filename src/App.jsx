@@ -115,6 +115,7 @@ import PartnerSummaryReport from './pages/PartnerSummaryReport';
 import SharedHelixTokenRequirements from './pages/shared_HelixTokenRequirements';
 import SharedHelixTokenProductionBrief from './pages/shared_HelixTokenProductionBrief';
 import SharedHelixPrototypeSchematics from './pages/shared_HelixPrototypeSchematics';
+import SharedHelixTokenArchitecturePaperwork from './pages/shared_HelixTokenArchitecturePaperwork';
 
 const { Pages, Layout, mainPage } = pagesConfig;
 const mainPageKey = mainPage ?? Object.keys(Pages)[0];
@@ -271,6 +272,7 @@ const AuthenticatedApp = () => {
         <Route path="/helix-token-requirements" element={<LayoutWrapper currentPageName="helix-token-requirements"><SharedHelixTokenRequirements /></LayoutWrapper>} />
         <Route path="/helix-token-production-brief" element={<LayoutWrapper currentPageName="helix-token-production-brief"><SharedHelixTokenProductionBrief /></LayoutWrapper>} />
         <Route path="/helix-prototype-schematics" element={<LayoutWrapper currentPageName="helix-prototype-schematics"><SharedHelixPrototypeSchematics /></LayoutWrapper>} />
+        <Route path="/helix-token-architecture-paperwork" element={<LayoutWrapper currentPageName="helix-token-architecture-paperwork"><SharedHelixTokenArchitecturePaperwork /></LayoutWrapper>} />
       </Route>
 
       <Route path="*" element={<PageNotFound />} />

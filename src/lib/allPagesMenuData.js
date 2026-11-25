@@ -149,6 +149,7 @@ export const ALL_PAGE_GROUPS = [
       { label: 'Token Requirements', to: '/helix-token-requirements' },
       { label: 'Token Production Brief', to: '/helix-token-production-brief' },
       { label: 'Prototype Schematics', to: '/helix-prototype-schematics' },
+      { label: 'Token Architecture Paperwork', to: '/helix-token-architecture-paperwork' },
       { label: 'About', to: '/About' },
       { label: 'Contact', to: '/Contact' },
       { label: 'Connect AI', to: '/connect' },

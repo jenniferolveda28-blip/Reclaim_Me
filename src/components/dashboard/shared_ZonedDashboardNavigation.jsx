@@ -74,6 +74,7 @@ const OWNER_CATEGORIES = {
       { label: 'Auditor Portal', to: '/auditor-portal', icon: Gavel },
       { label: 'Compliance Log', to: '/auditor-compliance-log', icon: ScrollText },
       { label: 'Certificates', to: '/certificate-registry', icon: FileText },
+      { label: 'Token Architecture', to: '/helix-token-architecture-paperwork', icon: FileText },
       { label: 'Scrambling Reports', to: '/ScramblingReports', icon: Gauge },
       { label: 'Exposure Trends', to: '/exposure-trends', icon: BarChart3 },
       { label: 'Hourly Email Setup', to: createPageUrl('HourlySecurityEmailSetup'), icon: Mail },
