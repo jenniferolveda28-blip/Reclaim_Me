@@ -30,7 +30,7 @@ base44 dev
 | Auditor workflow | `AuditorPortal`, `AuditorManagement`, `AuditorAccess`, `AuditorAccessLogs`, `AuditorCertificatePortal`, `AuditComplianceDashboard`, `AuditFeedbackTracker` |
 | Identity verification | `HelixVerify*` screens, `Authenticator`, `HardwareHealth`, `HardwareDiagnostics` |
 | Exposure removal | `DataBroker` screens, `Exposure*`, `PendingRemovalDashboard`, `DataRemovalLogs`, `DataRemovalCalendar` |
-| Platform health | `APIGatewayHealth`, `Analytics`, `SecurityLog`, `SecurityConfig` |
+| Platform health | `APIGatewayHealth`, `Analytics`, `SecurityLogMonitor`, `SecurityConfiguration` |
 
 ## Data model (`base44/entities`)
 
@@ -43,7 +43,7 @@ base44 dev
 
 ## Notes
 
-- `src/components` holds only 11 shared components; most UI is page-local, which is why page count is high. Expect each page to carry its own logic.
+- `src/components` holds 158 components, most of them page-specific, which is why page count is high. Expect each page to carry its own logic.
 - `DemoBanner` and `PrintReportButton` signal a demo mode and print/PDF report output. Keep both in mind when changing shared layout.
 ```
 
