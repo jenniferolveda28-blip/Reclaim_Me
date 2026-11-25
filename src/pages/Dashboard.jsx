@@ -37,6 +37,7 @@ import UserHelixTokenStatusView from '../components/dashboard/user_HelixTokenSta
 import SharedThreatsDetectedSection from '../components/dashboard/shared_ThreatsDetectedSection';
 import OwnersThreatLatencyTrendChart from '../components/dashboard/owners_ThreatLatencyTrendChart';
 import SharedZonedDashboardNavigation from '../components/dashboard/shared_ZonedDashboardNavigation';
+import SharedAllPagesMenu from '../components/dashboard/shared_AllPagesMenu';
 import OwnersUserManagementSection from '../components/dashboard/owners_UserManagementSection';
 import SharedBrandLogo from '../components/shared_BrandLogo';
 import { FileText, Users } from 'lucide-react';
@@ -141,6 +142,11 @@ export default function Dashboard() {
             />
           </div>
           </div>
+        </div>
+
+        {/* All Pages dropdown menu */}
+        <div className="mb-5">
+          <SharedAllPagesMenu />
         </div>
 
         {/* Two-Zone Navigation: Everyday User Experience vs. High-Level Owner Management */}
