@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { createPageUrl } from '../utils';
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import ThreePillarArchitecture from '@/components/security/ReclamMeArchitecture';
+import ReclaimMeArchitecture from '@/components/security/ReclaimMeArchitecture';
 import PrintReportButton from '../components/PrintReportButton';
 
 export default function ThreePillarView() {
@@ -29,7 +29,7 @@ export default function ThreePillarView() {
                         ]}
                     />
                 </div>
-                <ThreePillarArchitecture />
+                <ReclaimMeArchitecture />
             </div>
         </div>
     );
