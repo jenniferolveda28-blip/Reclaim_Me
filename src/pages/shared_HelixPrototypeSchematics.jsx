@@ -68,7 +68,7 @@ export default function SharedHelixPrototypeSchematics() {
             </Link>
           </Button>
           <Button asChild variant="outline" size="sm" className="border-slate-700 text-slate-300">
-            <Link to="/bioverify-blueprint">
+            <Link to="/helixverify-blueprint">
               <FileText className="w-4 h-4 mr-1" /> System Architecture
             </Link>
           </Button>

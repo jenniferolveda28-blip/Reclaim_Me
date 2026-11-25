@@ -126,7 +126,7 @@ export default function SharedHelixTokenRequirements() {
         <p className="text-xs text-slate-500">
           Related: <Link to="/token-enrollment" className="text-cyan-400 hover:underline">Token enrollment</Link> ·{' '}
           <Link to="/dna-enrollment" className="text-cyan-400 hover:underline">DNA enrollment</Link> ·{' '}
-          <Link to="/bioverify-hardware-status" className="text-cyan-400 hover:underline">Hardware status</Link>
+          <Link to="/helixverify-hardware-status" className="text-cyan-400 hover:underline">Hardware status</Link>
         </p>
       </div>
     </div>

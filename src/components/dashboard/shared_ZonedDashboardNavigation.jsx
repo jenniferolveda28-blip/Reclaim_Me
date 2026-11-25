@@ -41,7 +41,7 @@ const USER_EXPERIENCE_LINKS = [
   { label: 'Exposure Shield', to: '/exposure-shield', icon: Shield, accent: 'text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10' },
   { label: 'Identity Dashboard', to: '/identity-dashboard', icon: Activity, accent: 'text-cyan-400 border-cyan-500/30 hover:bg-cyan-500/10' },
   { label: 'Token Enrollment', to: '/token-enrollment', icon: Watch, accent: 'text-amber-300 border-amber-500/30 hover:bg-amber-500/10' },
-  { label: 'Hardware Status', to: '/bioverify-hardware-status', icon: Watch, accent: 'text-cyan-400 border-cyan-500/30 hover:bg-cyan-500/10' },
+  { label: 'Hardware Status', to: '/helixverify-hardware-status', icon: Watch, accent: 'text-cyan-400 border-cyan-500/30 hover:bg-cyan-500/10' },
   { label: 'My Security Report', to: '/user-security-report', icon: FileSearch, accent: 'text-emerald-400 border-emerald-500/30 hover:bg-emerald-500/10' },
   { label: 'Data Brokers', to: '/data-broker-directory', icon: Database, accent: 'text-cyan-400 border-cyan-500/30 hover:bg-cyan-500/10' },
   { label: 'Dynamic Scrambler', to: createPageUrl('DynamicScrambler'), icon: RefreshCw, accent: 'text-blue-400 border-blue-500/30 hover:bg-blue-500/10' },

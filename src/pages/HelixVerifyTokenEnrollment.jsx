@@ -23,15 +23,15 @@ const statusStyle = {
   rejected: 'border-red-600/50 text-red-300'
 };
 
-export default function BioVerifyTokenEnrollment() {
+export default function HelixVerifyTokenEnrollment() {
   const qc = useQueryClient();
   const [serial, setSerial] = useState('');
   const [email, setEmail] = useState('');
-  const { data: regs = [], isLoading } = useQuery({ queryKey: ['bioVerifyRegs'], queryFn: () => base44.entities.HelixVerifyRegistration.list('-created_date', 100) });
+  const { data: regs = [], isLoading } = useQuery({ queryKey: ['helixVerifyRegs'], queryFn: () => base44.entities.HelixVerifyRegistration.list('-created_date', 100) });
 
   const createReg = useMutation({
     mutationFn: (data) => base44.entities.HelixVerifyRegistration.create(data),
-    onSuccess: () => { qc.invalidateQueries(['bioVerifyRegs']); setSerial(''); setEmail(''); }
+    onSuccess: () => { qc.invalidateQueries(['helixVerifyRegs']); setSerial(''); setEmail(''); }
   });
 
   const submit = () => {
@@ -71,7 +71,7 @@ export default function BioVerifyTokenEnrollment() {
             <CardContent className="space-y-3">
               <div>
                 <label className="text-sm text-slate-400">Token Serial Number</label>
-                <Input value={serial} onChange={e => setSerial(e.target.value)} placeholder="BV-XXXX-XXXX" className="bg-slate-950 border-slate-700 text-white mt-1" />
+                <Input value={serial} onChange={e => setSerial(e.target.value)} placeholder="HLXV-XXXX-XXXX" className="bg-slate-950 border-slate-700 text-white mt-1" />
               </div>
               <div>
                 <label className="text-sm text-slate-400">Registrant Email</label>

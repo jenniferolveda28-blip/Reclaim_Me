@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import PrintReportButton from '@/components/PrintReportButton';
+import SharedBrandLogo from '@/components/shared_BrandLogo';
 import { format } from 'date-fns';
 import {
   Shield, Activity, Globe, Zap, AlertTriangle, CheckCircle2, TrendingUp,
@@ -99,9 +100,7 @@ export default function InvestorOverview() {
         {/* ── HEADER ── */}
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 pb-6 border-b border-slate-700">
           <div className="flex items-center gap-4">
-            <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/30">
-              <BarChart3 className="w-7 h-7 text-white" />
-            </div>
+            <SharedBrandLogo className="w-14 h-14" />
             <div>
               <h1 className="text-3xl font-black gradient-text">Investor System Overview</h1>
               <p className="text-slate-400 text-sm">Live system status & threat history — presentation-ready</p>

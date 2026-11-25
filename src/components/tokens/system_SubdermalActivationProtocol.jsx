@@ -62,7 +62,7 @@ export default function SystemSubdermalActivationProtocol() {
   const [feedback, setFeedback] = useState(null);
 
   const { data: registrations = [] } = useQuery({
-    queryKey: ['bioVerifyRegs'],
+    queryKey: ['helixVerifyRegs'],
     queryFn: () => base44.entities.HelixVerifyRegistration.list('-created_date', 100),
   });
 
@@ -115,7 +115,7 @@ export default function SystemSubdermalActivationProtocol() {
     }
 
     qc.invalidateQueries({ queryKey: ['tokenActivationFailureLogs'] });
-    qc.invalidateQueries({ queryKey: ['bioVerifyRegs'] });
+    qc.invalidateQueries({ queryKey: ['helixVerifyRegs'] });
     qc.invalidateQueries({ queryKey: ['securityLogs'] });
     qc.invalidateQueries({ queryKey: ['secMonitorLogs'] });
   };
@@ -211,7 +211,7 @@ export default function SystemSubdermalActivationProtocol() {
         });
       }
 
-      qc.invalidateQueries({ queryKey: ['bioVerifyRegs'] });
+      qc.invalidateQueries({ queryKey: ['helixVerifyRegs'] });
       qc.invalidateQueries({ queryKey: ['helixVerifyTokenHealth'] });
       qc.invalidateQueries({ queryKey: ['hardwareTokens'] });
       qc.invalidateQueries({ queryKey: ['securityLogs'] });

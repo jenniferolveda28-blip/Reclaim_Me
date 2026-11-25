@@ -70,15 +70,15 @@ import AuditFeedbackTracker from './pages/AuditFeedbackTracker';
 import AuditFixSummary from './pages/AuditFixSummary';
 import AuditorAccess from './pages/AuditorAccess';
 import AuditorManagement from './pages/AuditorManagement';
-import BioVerifyBlueprint from './pages/BioVerifyBlueprint';
-import BioVerifyHandbook from './pages/BioVerifyHandbook';
+import HelixVerifyBlueprint from './pages/HelixVerifyBlueprint';
+import HelixVerifyHandbook from './pages/HelixVerifyHandbook';
 import SelfCertificationForm from './pages/SelfCertificationForm';
 import ExposureShield from './pages/ExposureShield';
 import WeeklyExposureSummary from './pages/WeeklyExposureSummary';
 import OwnersSecurityReport from './pages/owners_security_report';
 import UserSecurityReport from './pages/user_security_report';
 import DataBrokerDirectory from './pages/DataBrokerDirectory';
-import BioVerifyHardwareStatus from './pages/BioVerifyHardwareStatus';
+import HelixVerifyHardwareStatus from './pages/HelixVerifyHardwareStatus';
 import ThreatRemediationQueue from './pages/ThreatRemediationQueue';
 import SecurityConfiguration from './pages/SecurityConfiguration';
 import CertificateRegistry from './pages/CertificateRegistry';
@@ -94,7 +94,7 @@ import AuditorCertificatePortal from './pages/AuditorCertificatePortal';
 import MovingTargetDefenseHistory from './pages/MovingTargetDefenseHistory';
 import DataBrokerRegistry from './pages/DataBrokerRegistry';
 import AuditComplianceDashboard from './pages/AuditComplianceDashboard';
-import BioVerifyTokenEnrollment from './pages/BioVerifyTokenEnrollment';
+import HelixVerifyTokenEnrollment from './pages/HelixVerifyTokenEnrollment';
 import SecurityLogMonitor from './pages/SecurityLogMonitor';
 import InvestorReportingHub from './pages/InvestorReportingHub';
 import DataRemovalLogs from './pages/DataRemovalLogs';
@@ -227,15 +227,15 @@ const AuthenticatedApp = () => {
         <Route path="/audit-feedback-tracker" element={<LayoutWrapper currentPageName="audit-feedback-tracker"><AuditFeedbackTracker /></LayoutWrapper>} />
         <Route path="/audit-fix-summary" element={<LayoutWrapper currentPageName="audit-fix-summary"><AuditFixSummary /></LayoutWrapper>} />
         <Route path="/auditor-management" element={<LayoutWrapper currentPageName="auditor-management"><AuditorManagement /></LayoutWrapper>} />
-        <Route path="/bioverify-blueprint" element={<LayoutWrapper currentPageName="bioverify-blueprint"><BioVerifyBlueprint /></LayoutWrapper>} />
+        <Route path="/helixverify-blueprint" element={<LayoutWrapper currentPageName="helixverify-blueprint"><HelixVerifyBlueprint /></LayoutWrapper>} />
         <Route path="/exposure-shield" element={<LayoutWrapper currentPageName="exposure-shield"><ExposureShield /></LayoutWrapper>} />
-        <Route path="/bioverify-handbook" element={<LayoutWrapper currentPageName="bioverify-handbook"><BioVerifyHandbook /></LayoutWrapper>} />
+        <Route path="/helixverify-handbook" element={<LayoutWrapper currentPageName="helixverify-handbook"><HelixVerifyHandbook /></LayoutWrapper>} />
         <Route path="/self-certification" element={<LayoutWrapper currentPageName="self-certification"><SelfCertificationForm /></LayoutWrapper>} />
         <Route path="/weekly-exposure-summary" element={<LayoutWrapper currentPageName="weekly-exposure-summary"><WeeklyExposureSummary /></LayoutWrapper>} />
         <Route path="/owners-security-report" element={<LayoutWrapper currentPageName="owners-security-report"><OwnersSecurityReport /></LayoutWrapper>} />
         <Route path="/user-security-report" element={<LayoutWrapper currentPageName="user-security-report"><UserSecurityReport /></LayoutWrapper>} />
         <Route path="/data-broker-directory" element={<LayoutWrapper currentPageName="data-broker-directory"><DataBrokerDirectory /></LayoutWrapper>} />
-        <Route path="/bioverify-hardware-status" element={<LayoutWrapper currentPageName="bioverify-hardware-status"><BioVerifyHardwareStatus /></LayoutWrapper>} />
+        <Route path="/helixverify-hardware-status" element={<LayoutWrapper currentPageName="helixverify-hardware-status"><HelixVerifyHardwareStatus /></LayoutWrapper>} />
         <Route path="/remediation-queue" element={<LayoutWrapper currentPageName="remediation-queue"><ThreatRemediationQueue /></LayoutWrapper>} />
         <Route path="/security-configuration" element={<LayoutWrapper currentPageName="security-configuration"><SecurityConfiguration /></LayoutWrapper>} />
         <Route path="/certificate-registry" element={<LayoutWrapper currentPageName="certificate-registry"><CertificateRegistry /></LayoutWrapper>} />
@@ -251,7 +251,7 @@ const AuthenticatedApp = () => {
         <Route path="/moving-target-defense-history" element={<LayoutWrapper currentPageName="moving-target-defense-history"><MovingTargetDefenseHistory /></LayoutWrapper>} />
         <Route path="/data-broker-registry" element={<LayoutWrapper currentPageName="data-broker-registry"><DataBrokerRegistry /></LayoutWrapper>} />
         <Route path="/audit-compliance" element={<LayoutWrapper currentPageName="audit-compliance"><AuditComplianceDashboard /></LayoutWrapper>} />
-        <Route path="/token-enrollment" element={<LayoutWrapper currentPageName="token-enrollment"><BioVerifyTokenEnrollment /></LayoutWrapper>} />
+        <Route path="/token-enrollment" element={<LayoutWrapper currentPageName="token-enrollment"><HelixVerifyTokenEnrollment /></LayoutWrapper>} />
         <Route path="/security-log-monitor" element={<LayoutWrapper currentPageName="security-log-monitor"><SecurityLogMonitor /></LayoutWrapper>} />
         <Route path="/investor-reporting" element={<LayoutWrapper currentPageName="investor-reporting"><InvestorReportingHub /></LayoutWrapper>} />
         <Route path="/data-removal-logs" element={<LayoutWrapper currentPageName="data-removal-logs"><DataRemovalLogs /></LayoutWrapper>} />

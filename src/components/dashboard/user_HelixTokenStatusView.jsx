@@ -341,7 +341,7 @@ export default function UserHelixTokenStatusView() {
       <div className="mt-3 pt-2 border-t border-slate-800/60 flex items-center justify-between flex-wrap gap-2 text-xs">
         <div className="flex items-center gap-4">
           <Link
-            to="/bioverify-hardware-status"
+            to="/helixverify-hardware-status"
             className="text-cyan-400 hover:text-cyan-300 transition-colors"
           >
             Full hardware diagnostics →

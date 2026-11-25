@@ -14,9 +14,9 @@ const syncStyle = {
 const batteryColor = (lvl) => lvl > 60 ? 'text-emerald-400' : lvl > 20 ? 'text-amber-400' : 'text-red-400';
 const batteryBar = (lvl) => lvl > 60 ? 'bg-emerald-500' : lvl > 20 ? 'bg-amber-500' : 'bg-red-500';
 
-export default function BioVerifyHardwareStatus() {
+export default function HelixVerifyHardwareStatus() {
   const { data = [], isLoading } = useQuery({
-    queryKey: ['bioverifyHardware'],
+    queryKey: ['helixVerifyHardware'],
     queryFn: () => base44.entities.HelixVerifyToken.list('-created_date', 50),
     refetchInterval: 15000
   });

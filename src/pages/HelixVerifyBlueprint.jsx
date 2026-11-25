@@ -108,7 +108,7 @@ const COLOR_MAP = {
   emerald: { border: 'border-emerald-500/40', bg: 'bg-emerald-500/10', text: 'text-emerald-400', glow: 'shadow-emerald-500/20' }
 };
 
-export default function BioVerifyBlueprint() {
+export default function HelixVerifyBlueprint() {
   return (
     <div className="min-h-screen text-slate-100 p-4 md:p-8 max-w-5xl mx-auto">
       {/* Document Header */}

@@ -8,10 +8,10 @@ import { Badge } from '@/components/ui/badge';
 import { BookOpen, ClipboardCheck, KeyRound, FileText, ArrowRight, Gavel } from 'lucide-react';
 
 const links = [
-  { to: '/bioverify-handbook', icon: BookOpen, title: 'HelixVerify Handbook', desc: 'Architecture & verification documentation' },
+  { to: '/helixverify-handbook', icon: BookOpen, title: 'HelixVerify Handbook', desc: 'Architecture & verification documentation' },
   { to: '/self-certification', icon: ClipboardCheck, title: 'Self-Certification Form', desc: 'Enroll a token & test identity verification' },
   { to: '/auditor-access', icon: KeyRound, title: 'Auditor Access Portal', desc: 'Verify passcode & complete questionnaire' },
-  { to: '/bioverify-blueprint', icon: FileText, title: 'HelixVerify Blueprint', desc: 'Token architecture paperwork prototype' }
+  { to: '/helixverify-blueprint', icon: FileText, title: 'HelixVerify Blueprint', desc: 'Token architecture paperwork prototype' }
 ];
 
 export default function AuditorPortal() {

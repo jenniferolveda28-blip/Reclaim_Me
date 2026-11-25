@@ -38,6 +38,7 @@ import SharedThreatsDetectedSection from '../components/dashboard/shared_Threats
 import OwnersThreatLatencyTrendChart from '../components/dashboard/owners_ThreatLatencyTrendChart';
 import SharedZonedDashboardNavigation from '../components/dashboard/shared_ZonedDashboardNavigation';
 import OwnersUserManagementSection from '../components/dashboard/owners_UserManagementSection';
+import SharedBrandLogo from '../components/shared_BrandLogo';
 import { FileText, Users } from 'lucide-react';
 
 export default function Dashboard() {
@@ -76,9 +77,7 @@ export default function Dashboard() {
         <div className="mb-8">
           <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-3">
-            <div className="p-3 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl shadow-lg shadow-cyan-500/50">
-              <Sparkles className="w-8 h-8 text-white" />
-            </div>
+            <SharedBrandLogo className="w-14 h-14" />
             <div>
               <h1 className="text-4xl font-bold gradient-text">Reclaim Me</h1>
               <p className="text-slate-400">HelixVerify • CipherPass • Dynamic Scrambler</p>

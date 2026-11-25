@@ -6,6 +6,7 @@ import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { ShieldCheck, KeyRound, ClipboardCheck, Loader2, CheckCircle2, Lock, Mail } from 'lucide-react';
+import SharedBrandLogo from '@/components/shared_BrandLogo';
 
 const QUESTIONNAIRE = [
   { id: 'overall_rating', label: 'Rate the overall security posture (1 = Poor, 5 = Excellent)', type: 'rating' },
@@ -78,9 +79,7 @@ export default function AuditorAccess() {
       <div className="w-full max-w-2xl">
         {/* Header */}
         <div className="text-center mb-8">
-          <div className="inline-flex p-4 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl shadow-lg shadow-cyan-500/30 mb-4">
-            <ShieldCheck className="w-10 h-10 text-white" />
-          </div>
+          <SharedBrandLogo className="w-24 h-24 mx-auto mb-4" />
           <h1 className="text-3xl font-bold text-white">Reclaim Me</h1>
           <p className="text-slate-400 mt-1">Auditor Access Portal</p>
         </div>
@@ -134,7 +133,7 @@ export default function AuditorAccess() {
                     onChange={(e) => setPasscode(e.target.value.toUpperCase())}
                     required
                     className="bg-slate-900/50 border-slate-700 text-white font-mono tracking-wider"
-                    placeholder="BVFY-XXXX-XXXX"
+                    placeholder="HLXV-XXXX-XXXX"
                   />
                 </div>
                 {error && <p className="text-sm text-red-400">{error}</p>}

@@ -24,7 +24,7 @@ function generatePasscode() {
     crypto.getRandomValues(bytes);
     return Array.from(bytes, (b) => chars[b % chars.length]).join('');
   };
-  return `BVFY-${segment(4)}-${segment(4)}`;
+  return `HLXV-${segment(4)}-${segment(4)}`;
 }
 
 export default function AuditorManagement() {
